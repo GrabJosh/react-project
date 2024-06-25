@@ -1,10 +1,11 @@
-import "./App.css";
+import "./index.css";
 import Employee from "./components/Employee";
 import { useState } from "react";
 
 function App() {
   const [role, setRole] = useState("Engineer");
   const showEmployees = true;
+
   return (
     <div className="App">
       {showEmployees ? (
@@ -16,10 +17,38 @@ function App() {
               setRole(e.target.value);
             }}
           />
-          <Employee name="Caleb" role="Intern" />
-          <Employee name="Abby" role={role} />
-          <Employee name="Cliff" role="Sr. Engineer" />
-          <Employee name="Tori" />
+          <div className="flex flex-wrap">
+            <Employee
+              name="Caleb"
+              role="Intern"
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+            <Employee
+              name="Abby"
+              role={role}
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+            <Employee
+              name="Cliff"
+              role="Sr. Engineer"
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+            <Employee
+              name="Caleb"
+              role="Intern"
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+            <Employee
+              name="Abby"
+              role={role}
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+            <Employee
+              name="Cliff"
+              role="Sr. Engineer"
+              img="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg"
+            />
+          </div>
         </>
       ) : (
         <h1>No employees to show</h1>
