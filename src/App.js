@@ -3,7 +3,6 @@ import Employee from "./components/Employee";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-//enter the function here
 function App() {
   const [role, setRole] = useState("Engineer");
   const [employees, setEmployees] = useState([
